@@ -1,0 +1,20 @@
+/* variables.css - Paleta i estils globals */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  /* Fonts */
+  --font-roboto-mono: 'Roboto Mono', monospace;
+  --tipus-body: var(--font-roboto-mono);
+  
+  /* Colors */
+  --color-white: #FFFFFF;
+  --color-dark-red: #400E1B;
+  --color-black: #000000;
+  --color-grey: #999999; /*Nou gris per al hover dels enllaços*/
+    
+  /* Textures */
+  --texture-diagonal-lines: 
+    url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23400e1b' fill-opacity='0.16' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}

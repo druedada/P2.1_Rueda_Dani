@@ -1,0 +1,195 @@
+/*Arxiu principal d'estils - Utilitzant variables de variables.css*/
+
+/* Importa totes les variables (colors, fonts, textures, layout vars) */
+@import url('./variables.css');
+
+/* Font global per a tot el text */
+* {
+  font-family: var(--tipus-body);
+}
+
+.logo {
+  /* Estil del logo */
+  font-size: 1.75rem;
+  /*Mida de font gran*/
+  font-weight: bold;
+  /*Negreta*/
+}
+
+/* Estil dels enllaços */
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/*Estat amb el cursor per sobre*/
+a:hover {
+  color: var(--color-grey);
+  text-decoration: underline;
+  /*Subrallat*/
+}
+
+a:active {
+  /*Estat quan es clica*/
+  color: var(--color-black);
+}
+
+/* Estil del cos */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+/* Estil del capçalera */
+header {
+  background-color: var(--color-dark-red);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-family: var(--tipus-body);
+}
+
+/* Estil del contingut principal */
+main {
+  background-color: var(--color-white);
+  background-image: var(--texture-diagonal-lines);
+  color: var(--color-black);
+  padding: 2rem;
+  font-family: var(--tipus-body);
+}
+
+/* Estil del peu de pàgina */
+footer {
+  background-color: var(--color-dark-red);
+  color: var(--color-white);
+  padding: 1rem;
+  font-family: var(--tipus-body);
+  text-align: center;
+}
+
+/* ESTILS DE LA NAVEGACIÓ */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /*Espai entre logo i llista */
+  align-items: flex-start;
+}
+
+/* Estil de la llista de navegació */
+.nav-list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  /*Espai entre els enllaços*/
+}
+
+/* ESTILS DEL CONTENIDOR PRINCIPAL */
+.container {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  /*Padding lateral*/
+  margin: 0 auto;
+  /*Centrat horitzontal*/
+}
+
+/* CARDS - UNA COLUMNA (Mobile First) */
+.cards {
+  display: flex;
+  /*Contenidor flexible*/
+  flex-direction: column;
+  /*Columna per defecte*/
+  gap: 1.25rem;
+  /*Espai entre cards*/
+  margin: 2rem 0;
+  /*Marges superior i inferior*/
+}
+
+/* Estil de cada card */
+.card {
+  background-color: white;
+  /*Fons blanc*/
+  border: 1px solid var(--color-grey);
+  /*Marc d'un pixel gris clar*/
+  justify-content: center;
+  /*Centrat horitzontal*/
+  border-radius: 0.5rem;
+  /*Cantons arrodonits*/
+  padding: 0.625rem 0.625rem 5rem;
+  /*Padding simulant foto polaroid*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /*Sombra suau*/
+}
+
+/* Estil de les imatges dins les cards */
+img {
+  max-width: 100%;
+  /*Amplada màxima del 100% del contenidor*/
+}
+
+/* MEDIA QUERIES TAULA (768px+) */
+@media (min-width: 768px) {
+
+  header {
+    /* Estil del capçalera */
+    padding: 1rem 6rem;
+    /*Més padding lateral en pantalles més grans*/
+  }
+
+  .nav {
+    /* Estil de la navegació */
+    flex-direction: row;
+    /*Canvi a fila*/
+    justify-content: space-between;
+    /*Espai entre logo i llista*/
+    align-items: center;
+    /*Centrat verticalment*/
+  }
+
+  .nav-list {
+    /* Estil de la llista de navegació */
+    flex-direction: row;
+    /*Canvi a fila*/
+    gap: 2rem;
+    /*Més espai entre els enllaços*/
+  }
+
+  .cards {
+    /* Estil de les cards */
+    flex-direction: row;
+    /*Canvi a fila*/
+    flex-wrap: wrap;
+    /*Permet que les cards facin salt de línia*/
+  }
+
+  .card {
+    /* Estil de cada card */
+    flex: 1 1 45%;
+    /*Flexibilitat per adaptar-se, amb amplada base del 45%*/
+    flex-wrap: wrap;
+    /*Permet que les cards facin salt de línia*/
+  }
+
+  .container {
+    /* Estil del contenidor principal */
+    padding: 2rem 6rem;
+    /*Més padding lateral en pantalles més grans*/
+  }
+}
+
+/* MEDIA QUERIES PORTATIL (1366px+) */
+@media (min-width: 1366px) {
+  .cards {
+    /* Estil de les cards */
+    justify-content: space-between;
+    /*Espai entre les cards*/
+  }
+
+  .card {
+    /* Estil de cada card */
+    flex: 1 1 30%;
+    /*Flexibilitat per adaptar-se, amb amplada base del 30%*/
+  }
+}

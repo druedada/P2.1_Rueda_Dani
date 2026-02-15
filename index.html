@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--Meta viewport per a capturar ample de pantalla amb escala inicial 1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imatges del meu gat</title> <!-- Títol de la pàgina -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enllaç al fitxer CSS per aplicar els estils -->
+</head>
+
+<body> <!-- Estructura de la pàgina -->
+    <header class="header">
+        <!--Secció d'enllaços de navegació amb class nav per a estilitzar al css. -->
+        <!--role navigation per a reforçar la navegació per pantalla. aria-label: etiqueta descriptiva accesible-->
+        <nav class="nav" role="navigation" aria-label="Menú principal">
+            <h1 class="logo">RILEY</h1>
+            <ul class="nav-list"> <!--Llista desendreçada per al navegador-->
+                <li><!--Llista amb links-->
+                    <a href="#" tabindex="0">Inici</a> <!-- tabindex per a navegació per teclat-->
+                </li>
+                <li>
+                    <!--href per a enviar la vista a la imatge-->
+                    <a href="#imatge1" tabindex="0">Imatge 1</a>
+                </li>
+                <li>
+                    <a href="#imatge2" tabindex="0">Imatge 2</a>
+                </li>
+                <li>
+                    <a href="#imatge3" tabindex="0">Imatge 3</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container" role="main"> <!--container principal amb role main-->
+        <p>Imatges del meu gat Riley</p>
+        <section class="cards" aria-label="Imatges gat">
+            <!--Secció amb class cards i aria-label per a descriure el contingut-->
+            <article id="imatge1" class="card" tabindex="0">
+                <!--Article amb id i class card per a estilitzar tabindex per a navegació per teclat-->
+                <img src="./img/riley1.jpg" alt="Gat a un bol de vidre" />
+                <!--Imatge amb atribut alt per a descripció accessible-->
+            </article>
+            <article id="imatge2" class="card" tabindex="0">
+                <img src="./img/riley2.jpg" alt="Gat a un sofà" />
+            </article>
+            <article id="imatge3" class="card" tabindex="0">
+                <img src="./img/riley3.jpg" alt="Gat a una hamaca" />
+            </article>
+        </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+        <p>&copy; Dani Rueda - 2025</p> <!--Copyright amb role contentinfo-->
+    </footer>
+</body>
+
+</html>

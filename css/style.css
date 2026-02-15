@@ -1,0 +1,12 @@
+/* Arxiu principal d'estils */
+/*D'es d'aqui s'importen tots els arxius css 
+començant pel reset, després les variables i finalment els estils de layout*/
+
+/* 1. Reset CSS primer per netejar estils per defecte */
+@import url('./reset.css');
+
+/* 2. Variables (colors, fonts, textures) */
+@import url('./variables.css');
+
+/* 3. Layout i estils principals */
+@import url('./layout.css');
